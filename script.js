@@ -3,6 +3,8 @@ const trailsRemaining = document.querySelector(".trails-remain");
 const winnerPage = (document.getElementsByClassName("winner"))[0].style;
 const loserPage = document.getElementsByClassName("winner")[1].style;
 const loserText = document.getElementById("loser-text");
+const inputNumber = document.getElementById("user-input");
+
 alert("Welcome user Guess number between 0 to 50 or you can change difficulty below");
 // winnerPage.display="block";
 let tasks = 5;
@@ -10,8 +12,11 @@ presetlevel = 1;
 trailsRemaining.innerHTML = `Tasks remaining ${tasks}`
 let randomnumber = Math.floor((Math.random() * 50) + 1);
 console.log(randomnumber);
-const inputNumber = document.getElementById("user-input");
 function takeInput() {
+    // if (inputNumber.value==null) {
+    //     alert("Input can't be blank");
+    //     return;
+    // }
     if (tasks > 1) {
         if (inputNumber.value == randomnumber) {
             tasks = tasks - 1;
@@ -41,8 +46,7 @@ function takeInput() {
        
     }
     else {
-        // inputNumber.value = null;
-
+        inputNumber.value = null;
         tasks = tasks - 1;
         loserText.innerHTML = `Oops! You Failed Text was -> ${randomnumber}`;
         loserPage.display = "flex";
@@ -59,6 +63,8 @@ function takeInput() {
 function difficulty(level) {
     
     if (level === 1) {
+        inputNumber.value = null;
+
         randomnumber = Math.floor((Math.random() * 50) + 1);
         presetlevel = level;
         tasks = 5;
@@ -68,18 +74,26 @@ function difficulty(level) {
 
     }
     else if (level === 2) {
+        inputNumber.value = null;
+
         randomnumber = Math.floor((Math.random() * 100) + 1);
         tasks = 5;
         presetlevel = level;
         console.log(randomnumber);
+        trailsRemaining.innerHTML = `Tasks remaining ${tasks}`
+
         alert("Guess number between 0 to 100");
         
     }
     else if (level === 3) {
+        inputNumber.value = null;
+
         randomnumber = Math.floor((Math.random() * 1000) + 1);
         tasks = 5;
         console.log(randomnumber);
         presetlevel = level;
+        trailsRemaining.innerHTML = `Tasks remaining ${tasks}`
+
         alert("Guess number between 0 to 1000");
 
     }

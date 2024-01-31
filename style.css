@@ -13,6 +13,7 @@ body {
     background: url(/aA4237.0.jpg) fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    /* overflow: hidden; */
 }
 .winner{
     position: fixed;
