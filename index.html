@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="winner">
+        <div class="winner-text">Well Done! You Guessed it right</div>
+    </div>
+    <div class="winner" style=" display: none;">
+        <div id="loser-text"></div>
+    </div>
+    <div class="container">
+        <div class="game-heading">
+            Number Guessing Game
+        </div>
+        <div class="user-input">
+            <input type="number" id="user-input">
+            <button id="input-submit" onclick="takeInput()">Submit</button>
+            <div class="trails-remain"></div>
+        </div>
+        <div class="level-card">
+            <!-- <div class="levels">Easy</div> -->
+            <!-- <div class="levels">Expert</div> -->
+            <!-- <div class="levels">Medium</div> -->
+            <div id="difficulty">Difficulty</div>
+            <button class="levels"onclick="difficulty(1)">Easy</button>
+            <button class="levels"onclick="difficulty(2)">Medium</button>
+            <button class="levels"onclick="difficulty(3)">Expert</button>
+        </div>
+        <!-- <div class="hintcombined">
+            <img src="/icons8-light-bulb.gif" alt="Hints" id="hints">
+            <span>Hint(3)</span>
+        </div> -->
+    </div>
+</body>
+<script src="/script.js"></script>
+
+</html>
