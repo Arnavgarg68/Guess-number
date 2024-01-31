@@ -13,7 +13,7 @@ body {
     background: url("aA4237.0.jpg") fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .winner{
     position: fixed;
@@ -213,7 +213,9 @@ body {
             justify-content: center;
             border-radius: 20px;
             box-shadow: 0px 0px 10px black;
-            background-color: rgb(190, 190, 31);
+            /* background-color: rgb(190, 190, 31); */
+    background-color: rgb(255, 255, 96);
+
             padding: 10px;
         }
         #difficulty{
