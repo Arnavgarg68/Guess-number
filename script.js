@@ -30,7 +30,7 @@ function takeInput() {
             trailsRemaining.innerHTML = `Tasks remaining ${tasks}`
         }
         if (tasks==2&&inputNumber.value != randomnumber) {
-            const msgevenodd=`number is between ${randomnumber-5>=0?randomnumber-5:0} and ${randomnumber>40?50:randomnumber+10}`;
+            const msgevenodd=`number is between ${randomnumber-5} and ${randomnumber+10}`;
             alert(msgevenodd);
             
         }
